@@ -1,0 +1,99 @@
+<!-- If error occurs after copying to the Label Studio "Labeling Interface" Code page, try to delete all the commented lines -->
+
+<!-- ======================== General Time Series Classification Template ======================== -->
+<View>
+  <!-- Object (source) tag for plot -->
+  <!-- Use the TimeSeries tag commented below to use a specific datetime column named as "time" -->
+  <!-- other not time-related attributes here should not be removed -->
+  <!-- Refer to template details in documentation here https://labelstud.io/templates/time_series.html -->
+  <!-- Refer to the tag details in the documentation here https://labelstud.io/tags/timeseries.html -->
+
+  <!-- <TimeSeries name="ts" valueType="url" value="$timeseriesUrl" sep="," timeColumn="time"
+  timeFormat="%Y-%m-%d %H:%M:%S" timeDisplayFormat="%Y-%m-%d"> -->
+
+  <!-- else just use this tag below without using any "time" column -->
+  <TimeSeries name="ts" valueType="url" value="$timeseriesUrl" sep=",">
+    <!-- You can include any column(s) from the CSV file with the exact
+    same name in each of the "column" attributes, e.g. in this case there are two columns named
+    exactly as "velocity" and "acceleration" -->
+    <Channel column="velocity" units="miles/h" displayFormat=",.1f" strokeColor="#1f77b4" legend="velocity" />
+    <Channel column="acceleration" units="miles/h^2" displayFormat=",.1f" strokeColor="#ff7f0e" legend="acceleration" />
+  </TimeSeries>
+
+  <Header value="Time Series classification" style="font-weight: normal" />
+  <!-- Choices (whole signal classification) -->
+  <!-- This will appear as checkboxes to be selected to label the entire time series -->
+  <!-- You can only choose one from here to label one time series, it is not multi-label -->
+  <Choices name="pattern" toName="ts">
+    <Choice value="Normal" />
+    <Choice value="Anomaly" />
+  </Choices>
+
+  <!-- Labels (per region classification) -->
+  <!-- This will appear as individual selectable labels to label specific regions -->
+  <!-- You can add more labels if necessary by adding more lines and renaming the "value" attributes -->
+  <TimeSeriesLabels name="label" toName="ts">
+    <Label value="Run" />
+    <Label value="Walk" />
+  </TimeSeriesLabels>
+</View>
+
+<!-- ======================== General Time Series Classification Template (no comments) ======================== -->
+<!-- ======================== This template is the same as above but without any comments to avoid errors ======================== -->
+<View>
+  <TimeSeries name="ts" valueType="url" value="$timeseriesUrl" sep="," timeColumn="time" timeFormat="%Y-%m-%d %H:%M:%S"
+    timeDisplayFormat="%Y-%m-%d">
+    <Channel column="velocity" units="miles/h" displayFormat=",.1f" strokeColor="#1f77b4" legend="velocity" />
+    <Channel column="acceleration" units="miles/h^2" displayFormat=",.1f" strokeColor="#ff7f0e" legend="acceleration" />
+  </TimeSeries>
+
+  <Header value="Time Series classification" style="font-weight: normal" />
+  <Choices name="pattern" toName="ts">
+    <Choice value="Normal" />
+    <Choice value="Anomaly" />
+  </Choices>
+
+  <TimeSeriesLabels name="label" toName="ts">
+    <Label value="Run" />
+    <Label value="Walk" />
+  </TimeSeriesLabels>
+</View>
+
+<!-- ======================== Outlier Detection Template ======================== -->
+<View>
+  <!-- Object tag for time series data source -->
+  <!-- The template here uses a datetime column named as "time" -->
+  <TimeSeries name="ts" valueType="url" value="$timeseriesUrl" sep="," timeColumn="time"
+    timeFormat="%d-%m-%Y %H:%M:%S.%f" timeDisplayFormat="%Y-%m-%d">
+    <Channel column="velocity" units="miles/h" displayFormat=",.1f" strokeColor="#800080" legend="velocity" />
+    <Channel column="acceleration" units="miles/h^2" displayFormat=",.1f" strokeColor="#ff7f0e" legend="acceleration" />
+  </TimeSeries>
+  <!-- Control tag for region labels -->
+  <TimeSeriesLabels name="label" toName="ts">
+    <Label value="Region" background="red" />
+  </TimeSeriesLabels>
+  <!-- The only difference here is the "perRegion" attribute which labels specific regions 
+    instead of using checkbox to label the entire time series at once -->
+  <Choices name="region_type" toName="ts" perRegion="true" required="true">
+    <Choice value="Outlier" />
+    <Choice value="Anomaly" />
+  </Choices>
+</View>
+
+
+<!-- ======================== Activity Recognition Template ======================== -->
+<View>
+  <!-- Object tag for time series data source -->
+  <TimeSeries name="ts" valueType="url" value="$timeseriesUrl" sep=",">
+    <Channel column="velocity" units="miles/h" displayFormat=",.1f" strokeColor="#1f77b4" legend="velocity" />
+    <Channel column="acceleration" units="miles/h^2" displayFormat=",.1f" strokeColor="#ff7f0e" legend="acceleration" />
+  </TimeSeries>
+  <!-- Control tag for region labels -->
+  <TimeSeriesLabels name="label" toName="ts">
+    <Label value="Run" background="red" />
+    <Label value="Walk" background="green" />
+    <Label value="Fly" background="blue" />
+    <Label value="Swim" background="#f6a" />
+    <Label value="Ride" background="#351" />
+  </TimeSeriesLabels>
+</View>

@@ -1,4 +1,4 @@
-# Custom Time Series Classification
+# Custom Time Series Classification & Anomaly Detection
 
 Link to Kaggle Dataset - [CareerCon 2019 - Help Navigate Robots](https://www.kaggle.com/c/career-con-2019/data).
 
