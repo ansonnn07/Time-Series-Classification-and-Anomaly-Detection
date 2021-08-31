@@ -4,3 +4,4 @@ matplotlib
 seaborn
 jupyterlab
 label-studio
+scikit-learn
