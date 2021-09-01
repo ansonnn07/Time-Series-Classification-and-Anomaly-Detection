@@ -4,4 +4,7 @@ data
 *.h5
 
 .ipynb_checkpoints
+.virtual_documents
 __pycache__
+
+lightning_logs
