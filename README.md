@@ -5,8 +5,12 @@ Link to Kaggle Dataset - [CareerCon 2019 - Help Navigate Robots](https://www.kag
 ## Notebooks
 
 `1. Labeling.ipynb`: This notebook shows how to label time series data using Label Studio for two tasks: classification and anomaly detection.
-`2. Training - Time Series Classification`: This notebook is used to train a time series classification model on the Kaggle dataset to help robots navigate. The latest updates should be referred in Google Colab as the model was trained there. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lcEF_rHSl1oS4pZg2NKSLZBTc0O7RpAK?usp=sharing)
-`3. Training - Time Series Anomaly Detection (PyTorch Lightning).ipynb`: This notebook is used to train a time series classification model on the ECG5000 heartbeat dataset obtained from [here](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000), to detect whether there is anomaly in a heartbeat sequence. The latest updates should also be referred in Google Colab as the model was trained there. This notebook makes use of PyTorch Lightning, which is a wrapper of PyTorch framework, to make the training code much easier to implement. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/15j6gevN8zGsvo1-uKq2Gc1IB8D-0G0X8?usp=sharing)
+
+`2. Training - Time Series Classification`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lcEF_rHSl1oS4pZg2NKSLZBTc0O7RpAK?usp=sharing) <br>
+This notebook is used to train a time series classification model on the Kaggle dataset to help robots navigate. The latest updates should be referred in Google Colab as the model was trained there. 
+
+`3. Training - Time Series Anomaly Detection (PyTorch Lightning).ipynb`: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/15j6gevN8zGsvo1-uKq2Gc1IB8D-0G0X8?usp=sharing) <br>
+This notebook is used to train a time series classification model on the ECG5000 heartbeat dataset obtained from [here](http://www.timeseriesclassification.com/description.php?Dataset=ECG5000), to detect whether there is anomaly in a heartbeat sequence. The latest updates should also be referred in Google Colab as the model was trained there. This notebook makes use of PyTorch Lightning, which is a wrapper of PyTorch framework, to make the training code much easier to implement. 
 
 
 
