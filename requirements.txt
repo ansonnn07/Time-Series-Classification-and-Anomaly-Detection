@@ -1,6 +1,8 @@
 numpy
 pandas
 arff2pandas
+yfinance
+cufflinks
 matplotlib
 seaborn
 jupyterlab
