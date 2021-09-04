@@ -1,10 +1,10 @@
 # Time Series Classification, Anomaly Detection & Forecasting with PyTorch (ft. PyTorch Lightning)
 
-<div style="display: flex; justify-content: center; align-items: center">
+<div align="center">
 
-<a href="https://pytorch.org/"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/pytorch_logo_icon_169823.png" width="400px"></a>
+<a href="https://pytorch.org/"><img src="https://github.com/pytorch/pytorch/blob/master/docs/source/_static/img/pytorch-logo-dark.png?raw=true" width="600px"></a>
 
-<a href="https://www.pytorchlightning.ai/"><img src="https://github.com/PyTorchLightning/pytorch-lightning/blob/master/docs/source/_static/images/logo.png?raw=true" width="400px"></a>
+<a href="https://www.pytorchlightning.ai/"><img src="https://github.com/PyTorchLightning/pytorch-lightning/blob/master/docs/source/_static/images/logo.png?raw=true" width="600px"></a>
 
 </div>
 
